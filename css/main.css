@@ -3,7 +3,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Rubik Mono One', sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+  }
+
+  /* h1 solo a scopo seo
+  dopo averlo messo, leggendo in giro ho visto che potrebbe essere una pratica che vada contro la policy di google*/
+  h1 {
+    display: none;
+  }
+  
 /* UTILITIES */
 .container {
     position: absolute;
@@ -16,6 +27,37 @@
 }
 
 /* HEADER CONTENT  */
+header .main-nav {
+    position: fixed;
+    top: 50px;
+    right: 40px;
+    z-index: 5;
+}
+
+.main-nav ul {
+    list-style: none;
+}
+.main-nav a,
+.main-nav li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center
+}
+.main-nav li {
+    margin-right: 35px;
+}
+.main-nav li:last-child {
+    margin-right: 0;
+}
+.main-nav a{
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
 
 /* MAIN CONTENT  */
 section.shoes-model {
@@ -23,7 +65,6 @@ section.shoes-model {
     height: 100vh;
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Rubik Mono One', sans-serif;
 }
 .shoes-model h2 {
     font-size: 48px;
@@ -32,15 +73,12 @@ section.shoes-model {
 .shoes-model#model-a {
     color: #ffff01;
     background-color: #f10303;
-
 }
 .shoes-model#model-b {
     color: #ffff01;
     background-color: #008000;
-
 }
 .shoes-model#model-c {
     color: #008000;
     background-color: #ffff01;
-
 }
